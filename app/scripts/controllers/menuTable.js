@@ -14,6 +14,6 @@ angular.module('kanbanListApp')
       'AngularJS',
       'Karma'
     ];
-
+    
     $scope.tableList = [];
   });
