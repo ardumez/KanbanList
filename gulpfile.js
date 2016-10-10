@@ -200,7 +200,6 @@ gulp.task('client:build', ['bower', 'html', 'styles'], function () {
       .pipe(jsFilter)
       .pipe($.ngAnnotate())
       .pipe($.uglify())
-      .pipe(concat('index.js'))
       .pipe(jsFilter.restore())
       .pipe(cssFilter)
       .pipe($.minifyCss({ cache: true }))

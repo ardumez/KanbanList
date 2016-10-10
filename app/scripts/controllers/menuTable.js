@@ -8,12 +8,17 @@
  * Controller of the kanbanListApp
  */
 angular.module('kanbanListApp')
-  .controller('MenuTaleCtrl', function () {
+  .controller('MenuTaleCtrl', ['$rootScope', '$scope', function ($rootScope, $scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
     
-    $scope.tableList = [];
-  });
+    $scope.showMenuTable = function() { return $rootScope.showTableMenu; };
+
+    $scope.tableList = [
+      { titre : "tableau 1" },
+      { titre : "tableau 2" }
+    ];
+  }]);

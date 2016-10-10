@@ -23,32 +23,20 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="header">
+    <div class="header" ng-controller="HeaderCtrl">
       <div class="navbar navbar-default" role="navigation">
         <div>
           <div class="navbar-header">
               <div class="navbar-form navbar-right">
-                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Tableaux</button>
+                  <button ng-click="showTableau()" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Tableaux</button>
               </div>
            
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+          
 
-            <a class="navbar-brand" href="#/">kanbanList</a>
+              <a class="navbar-brand" href="#/">kanbanList</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+      
         </div>
       </div>
     </div>
@@ -64,7 +52,7 @@
       </div>
     </div>
 
-    <div class="menu-table panel panel-default" ng-include src="'views/menuTable.html'"></div>
+    <div ng-include src="'views/menuTable.html'"></div>
   
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -87,6 +75,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/menuTable.js"></script>
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
